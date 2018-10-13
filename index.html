@@ -1,0 +1,115 @@
+<!--
+	Ross Hall
+	ross_hall@student.uml.edu
+	UMass Lowell Computer Science Student
+	COMP 4610 GUI Programming 1
+	Assignment No.4: Styling Your First Web Page With CSS
+	Copyright (c) 10/09/2018 by Ross Hall
+
+	This is the code for a website with a single page that is broken up into four different sections 
+	with working navigation between these sections. The styles currently being applied are preliminary. I designed it with a mobile device 
+	in mind first and will later reformat and add more content to make better use of space both in 
+	the mobile layout and in larger displays.
+-->
+
+<!DOCTYPE html>  <!-- specifies this as html doc -->
+<html lang="en">  <!-- indicates html code b/w tags is in english -->  
+	<head>  <!-- used to store metadata about the webpage-->
+		<meta charset = "UTF-8"/>  <!-- indicates character set to be used by browser -->
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">  <!-- Used for responsive design -->
+		
+		<title>Ross Hall</title>  <!-- appears in tab for webpage -->
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">  <!-- access stylesheet for formatting-->
+	</head>
+
+	<body>  <!-- contains the content of the webpage -->
+		<div id="wrapper">  <!--groups all content in a div -->
+			<div id="main" class="section"> <!-- section 1 of 4 -->
+				<header>   <!-- indicates title content of website-->
+					<h1>Ross Hall</h1>
+				</header>
+				
+				<nav>  <!-- indicates navigation menu --> 
+					<ul>  <!-- unordered list with hyperlinks to different divs in the webpage -->
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<div id="buttonWrap">  <!-- div used to limit movement of the menu button -->
+				<a href="#main">  <!-- hyper link back to main section -->
+					<div id="menuButton">  
+						<div class="triangle"></div>  <!-- border of this div used to create triangle -->
+					</div>
+				</a>
+				
+				<div id="portfolio" class="section">  <!-- section 2 0f 4 -->
+					<h2>Ross' Portfolio</h2>  <!-- h2 used for headings of sections 2-4 -->
+					<p>  <!-- paragraph tags for text in sections -->
+						My portfolio is rather empty at the moment. There are few projects in it currently but plenty of possibilities.
+						Stay tuned and this gallery will surely grow.
+					</p>
+					<div id="gallery">
+						<div class="galleryItem">
+							<a href="../Assignment3/index.html">
+								<img src="images/Assignment3.JPG" alt="Assignment3" class="galleryImg">
+								<p>Assignment 3</p>
+							</a>	
+						</div>
+						<div class="galleryItem">
+							<a>
+								<img src="images/Template.JPG" alt="Template" class="galleryImg">
+							</a>	
+						</div>
+						<div class="galleryItem">
+							<a>
+								<img src="images/Template.JPG" alt="Template" class="galleryImg">
+							</a>	
+						</div>
+						<div class="galleryItem">
+							<a>
+								<img src="images/Template.JPG" alt="Template" class="galleryImg">
+							</a>	
+						</div>
+						<div class="galleryItem">
+							<a>
+								<img src="images/Template.JPG" alt="Template" class="galleryImg">
+							</a>	
+						</div>
+						<div class="galleryItem">
+							<a>
+								<img src="images/Template.JPG" alt="Template" class="galleryImg">
+							</a>	
+						</div>
+					</div>
+				</div>
+				
+				<div id="about" class="section">  <!-- section 3 of 4 -->
+					<h2>About Ross</h2>
+					<p>	
+						I am currently a computer science student at UMass Lowell. Some things that I enjoy 
+						outside of computer science are playing guitar, mountain biking, rock climbing, 
+						gardening, and philosophy. One thing in this world that I absolutely love is my dog.
+						His name is Dug. Dug is a great mountain biking partner except for when he sees a squirrel!     
+					</p>
+					<img id="Dug" src="images/DugTheDog.jpg" alt="Dug is my dog!">
+				</div>
+				
+				<div id=contact class="section">  <!-- section 4 of 4 -->
+					<h2>Contact Ross</h2>
+					<p>The best way to reach me is through email at: <br><br> ross_hall@student.uml.edu</p>
+				</div>
+				<p>
+					<a href="http://jigsaw.w3.org/css-validator/check/referer">
+						<img style="border:0;width:88px;height:31px"
+							src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+							alt="Valid CSS!" />
+					</a>
+				</p>
+			</div>
+		</div>
+	</body>
+	</html>
